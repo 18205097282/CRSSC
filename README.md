@@ -46,7 +46,9 @@ The code is currently tested only on GPU.
 
         - Download one of the following trained models into `model/` using
             ```
-            wget 
+            wget https://fg-crssc.oss-cn-hongkong.aliyuncs.com/web-aircraft_bcnn_best_epoch_76.4776.pth
+            wget https://fg-crssc.oss-cn-hongkong.aliyuncs.com/web-bird_bcnn_best_epoch_77.4249.pth
+            wget https://fg-crssc.oss-cn-hongkong.aliyuncs.com/web-car_bcnn_best_epoch_76.6447.pth
             ```
         - Activate virtual environment (e.g. conda)
         - In `demo.sh`
