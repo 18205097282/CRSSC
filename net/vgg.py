@@ -27,7 +27,7 @@ class VGG16(nn.Module):
     fc:
     ->  fc(n_classes)
     """
-    def __init__(self, n_classes=200, pretrained=True, use_two_step=True):
+    def __init__(self, n_classes=200, pretrained=True, use_two_step=True, fc_init='He'):
         super().__init__()
         print('| A VGG16 network is instantiated, pre-trained: {}, two-step-training: {}, number of classes: {}'.format(pretrained, use_two_step, n_classes))
 
@@ -41,7 +41,10 @@ class VGG16(nn.Module):
 
         if self._pretrained:
             # Init the fc layer
-            nn.init.kaiming_normal_(self.fc.weight.data)
+            if fc_init == 'He':
+                nn.init.kaiming_normal_(self.fc.weight.data)
+            elif fc_init == 'Xavier':
+                nn.init.xavier_normal_(self.fc.weight.data)
             if self.fc.bias is not None:
                 nn.init.constant_(self.fc.bias.data, val=0)
             if use_two_step:
