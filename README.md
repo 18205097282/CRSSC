@@ -1,6 +1,6 @@
 Introduction
 ---
-Datasets and source code for our paper **CRSSC: Salvage Reusbale Samples for Robust Fine-Grained Recognition**
+Datasets and source code for our paper **CRSSC: Salvage Reusable Samples from Noisy Data for Robust Learning**
 
 
 Network Architecture
